@@ -12,10 +12,11 @@ class DashboardController extends Controller
     public static $laptop = ["HP","Lenovo","Acer","ASUS","Dell","Apple"];
     public static $ac = ["Haier","Voltas","Daikin","Godrej","Lloyd","LG","Whirlpool","Blue Star","Panasonic","Hitachi","Samsung"];
     public static $washingmaching = ["Godrej","Samsung","LG","Whirlpool","Voltas","Haier"];
+    public static $tv = ["Sony","Samsung","LG"];
 
-   public function socialLogin(Request $request){
+   public function dashboard(Request $request){
        try{
-        $url = 'http://localhost:3000/api/smartphones/getEveryProduct';
+        $url = \Config::get('app.SERVER_URL').'/api/smartphones/getEveryProduct';
         $response = Http::get($url);
         $products = $response->json();
         return view("dashboard",compact('products'));
@@ -27,7 +28,7 @@ class DashboardController extends Controller
 
    public function getProductByCategory(Request $request){
        try{
-        $url = 'http://localhost:3000/api/smartphones?';
+        $url = \Config::get('app.SERVER_URL').'/api/smartphones?';
         if($request->has('brands')){
             $url = $url."&brands=".$request->input('brands');
         }
@@ -46,8 +47,10 @@ class DashboardController extends Controller
             $category = self::$ac;
         }elseif(strtolower($request->input('category')) == "washingmachine"){
             $category = self::$washingmaching;
+        }elseif(strtolower($request->input('category')) == "tv"){
+            $category = self::$washingmaching;
         }
-        // dd($products[10]);
+        // dd($products[10]);   
         return view("pages.category",compact('products','category'));
        }catch(\Exception $ex){
         dd($ex->getMessage());
@@ -67,7 +70,7 @@ class DashboardController extends Controller
    public function detail(Request $request){
        try{
         $id = str_replace('+', ' ', $request->input('product'));
-        $url = 'http://localhost:3000/api/smartphones/getProductDetails/?name='.$id.'&productId='.$request->input('productId');
+        $url = \Config::get('app.SERVER_URL').'/api/smartphones/getProductDetails/?name='.$id.'&productId='.$request->input('productId');
         $response = Http::get($url);
         $products = $response->json() ??  ["smartphone" => [],"similarSmartphones" => []];
         
