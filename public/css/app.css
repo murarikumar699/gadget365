@@ -6251,4 +6251,8 @@ line-height: 15px;
   .sharebackground{
     display: none;
   }
+
+  #mainImage{
+    width: 360px;
+  }
 }
