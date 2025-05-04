@@ -6255,4 +6255,18 @@ line-height: 15px;
   #mainImage{
     width: 360px !important;
   }
+
+  .sharebackground{
+    display: none !important;
+  }
+
+
+  .SmartPhonesListAll-Card-body-title {
+    width: auto;
+    white-space: break-spaces;
+  }
+
+  .SmartPhonesListAll-Card-body-price {
+    margin-left: 0;
+  }
 }
