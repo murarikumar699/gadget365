@@ -40,6 +40,7 @@ return [
     */
 
     'debug' => (bool) env('APP_DEBUG', false),
+    'SERVER_URL' => env('SERVER_URL', 'http://localhost:3000'),
 
     /*
     |--------------------------------------------------------------------------
