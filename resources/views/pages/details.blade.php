@@ -61,7 +61,7 @@
                                 $chunks = array_chunk($products['smartphone']['productDescription'], ceil(count($products['smartphone']['productDescription']) / 2), true);
                             @endphp
 
-                            <div style="display: flex; gap: 30px;">
+                            <div class="productDetailDescription" style="display: flex; gap: 30px;">
                                 @foreach ($chunks as $chunk)
                                     <div class="MuiBox-root css-1ynyhby">
                                         @foreach ($chunk as $key => $value)
