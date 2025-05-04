@@ -16,7 +16,7 @@ use App\Http\Controllers\Admin\EventController;
 |
 */
 
-Route::get('/', [DashboardController::class, 'socialLogin']);
+Route::get('/', [DashboardController::class, 'dashboard']);
 Route::get('/s', [DashboardController::class, 'getProductByCategory']);
 Route::get('/category', [DashboardController::class, 'category']);
 Route::get('/productDetails', [DashboardController::class, 'detail']);
