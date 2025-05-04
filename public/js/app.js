@@ -1,8 +1,7 @@
 // public/js/app.js
-
 class DynamicRenderer {
     constructor() {
-        this.apiUrl = 'http://localhost:3000/api/smartphones';
+        this.apiUrl = 'http://13.203.196.233:3000/api/smartphones';
         this.filterProduct = []
         this.searchProductList = []
         const params = new URLSearchParams(window.location.search);
