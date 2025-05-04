@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+  <head>
   <meta charset="utf-8">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -41,6 +42,16 @@
   <meta name="twitter:image" content="https://i.ibb.co/6tVczb7/Screenshot-2024-04-26-at-12-17-20-PM-removebg.png">
 <script defer="" src="/static/js/bundle.js"></script>
 <link rel="stylesheet" href="{{url("css/app.css")}}">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8EWFPGFEV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q8EWFPGFEV');
+</script>
+
 </head>
 <body>
 
