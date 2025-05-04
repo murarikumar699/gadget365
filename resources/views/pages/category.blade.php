@@ -187,7 +187,9 @@
                                             <div class="SmartPhonesListAll-Card-body-container">
                                                 <div class="flex justify-between">
                                                     <a href="/productDetails/?name={{ str_replace(' ', '+', $product['title']) }}&productId={{$product['_id']}}" target="_blank">
-                                                        <div class="SmartPhonesListAll-Card-body-title">{{$product['title']}}</div>
+                                                        <div class="SmartPhonesListAll-Card-body-title">
+                                                            <h1>{{$product['title']}}</h1>
+                                                        </div>
                                                     </a>
                                                     <div class="SmartPhonesListAll-Card-body-price">₹{{$product['productPricing'][0]['price']}}</div>
                                                 </div>

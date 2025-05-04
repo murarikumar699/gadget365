@@ -30,7 +30,7 @@
                     <div class="SmartPhones-Flex2">
                         <div id="result" style="display:none;width: 700px; height: 500px;border: 1px solid #d4d4d4; background-repeat: no-repeat;"></div>
                         <div class="SmartPhones-title-heading">
-                            {{ str_replace('Sponsored Ad -', '', $products['smartphone']['title']) }}
+                            <h1>{{ str_replace('Sponsored Ad -', '', $products['smartphone']['title']) }}</h1>
                         </div>
                         <div class=" flex flex-col gap-3 mt-6">
                             <div class="SmartPhones-store-bg">
