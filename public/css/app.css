@@ -6279,4 +6279,12 @@ line-height: 15px;
   .SmartPhonesListsAll-Card-body{
     margin-top: -69px;
   }
+
+  .SmartPhones-store-price {
+    font-size: 18px;
+  }
+
+  .SmartPhones-store-name {
+    font-size: 18px;
+  }
 }
