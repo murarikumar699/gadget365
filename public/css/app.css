@@ -6253,6 +6253,6 @@ line-height: 15px;
   }
 
   #mainImage{
-    width: 360px;
+    width: 360px !important;
   }
 }
