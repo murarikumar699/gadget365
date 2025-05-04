@@ -6132,6 +6132,13 @@ line-height: 15px;
   gap: 30px;
 }
 
+
+.sharebackground{
+  background-color: aliceblue; 
+  height: 50px; 
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 480px) {
   .navbarLogo {
       font-size: 15px;
@@ -6161,7 +6168,7 @@ line-height: 15px;
   }
 
   .navbarwrapper {
-    width: 138%;
+    width: 123%;
     background-color: #fff;
   }
 
@@ -6230,5 +6237,18 @@ line-height: 15px;
 
   .css-1ynyhby {
     width: 475px;
+  }
+
+  .mobileViewDesc{
+    display: flex !important;
+    margin-bottom: 10px;
+  }
+
+  .mobileViewDesc svg{
+    display: none;
+  }
+
+  .sharebackground{
+    display: none;
   }
 }
