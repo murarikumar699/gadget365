@@ -6269,4 +6269,11 @@ line-height: 15px;
   .SmartPhonesListAll-Card-body-price {
     margin-left: 0;
   }
+
+
+  .dropdownss {
+    height: 500px;
+    left: -133px;
+    width: 154%;
+  }
 }
