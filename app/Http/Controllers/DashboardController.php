@@ -13,11 +13,11 @@ class DashboardController extends Controller
     public static $ac = ["Haier","Voltas","Daikin","Godrej","Lloyd","LG","Whirlpool","Blue Star","Panasonic","Hitachi","Samsung"];
     public static $washingmaching = ["Godrej","Samsung","LG","Whirlpool","Voltas","Haier"];
     public static $tv = ["Sony","Samsung","LG"];
-    public static $url = 'http://13.203.196.233';
+    public static $url = 'http://13.203.196.233:3000';
 
    public function dashboard(Request $request){
        try{
-        $url = $url.'/api/smartphones/getEveryProduct';
+        $url = self::$url.'/api/smartphones/getEveryProduct';
         $response = Http::get($url);
         $products = $response->json();
         return view("dashboard",compact('products'));
@@ -29,7 +29,7 @@ class DashboardController extends Controller
 
    public function getProductByCategory(Request $request){
        try{
-        $url = $url.'/api/smartphones?';
+        $url = self::$url.'/api/smartphones?';
         if($request->has('brands')){
             $url = $url."&brands=".$request->input('brands');
         }
@@ -71,7 +71,7 @@ class DashboardController extends Controller
    public function detail(Request $request){
        try{
         $id = str_replace('+', ' ', $request->input('product'));
-        $url = $url.'/api/smartphones/getProductDetails/?name='.$id.'&productId='.$request->input('productId');
+        $url = self::$url.'/api/smartphones/getProductDetails/?name='.$id.'&productId='.$request->input('productId');
         $response = Http::get($url);
         $products = $response->json() ??  ["smartphone" => [],"similarSmartphones" => []];
         
